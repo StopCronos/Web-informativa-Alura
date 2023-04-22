@@ -1,0 +1,68 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var colores = ["red","blue","green"];
+    var w = 30;
+
+    for (let index = 0; index < colores.length; index++) {
+        
+        pincel.fillStyle = colores[index];
+        pincel.fillRect((index)*w, 0, w, w);
+    }
+
+    var puedoDibujar = false;
+
+    function dibujarCirculo(evento) {
+
+        if(puedoDibujar) {
+            var x = evento.pageX - pantalla.offsetLeft;
+            var y = evento.pageY - pantalla.offsetTop;
+            pincel.fillStyle = colores[eleccion];
+            pincel.beginPath();
+            pincel.arc(x, y, 5, 0, 2 * 3.14);
+            pincel.fill();
+        }
+
+    }
+
+    pantalla.onmousemove = dibujarCirculo;
+
+    function habilitarDibujar() {
+
+        puedoDibujar = true;
+    }
+
+    function deshabilitarDibujar() {
+
+        puedoDibujar = false;
+    }
+
+    pantalla.onmousedown = habilitarDibujar;
+
+    pantalla.onmouseup = deshabilitarDibujar;
+
+    var eleccion = 1;
+    function changeColor(evento) {
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+
+        for (let index = 0; index < colores.length; index++) {
+        
+            if (x < (w * (index+1))  && 
+                x > (w*index) &&
+                y < w  &&
+                y > 0) {
+                eleccion = index;
+            }
+        }
+        
+    }
+
+    pantalla.onclick = changeColor;
+</script>

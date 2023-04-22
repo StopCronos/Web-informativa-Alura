@@ -1,0 +1,43 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<h1>programa tabla multiplicar</h1>
+<script>
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br><hr>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase){
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+    }
+
+    var edadPadre = 41;
+    var edadMadre = 38;
+    var edadHija = 15;
+    var edadHijo = 13;
+
+    var totalEdad = edadPadre + edadHijo + edadHija + edadMadre;
+
+    var media = totalEdad / 4;
+
+    imprimir("La media de edades es: " + media)
+
+    var numeroIntegrantes = parseInt(prompt("Cuantos son en tu familia?"));
+
+    var contador = 0;
+
+    var totalEdad = 0;
+    while (contador < numeroIntegrantes) {
+
+        edad = parseInt(prompt("Edad del familiar " + contador+1));
+        totalEdad = edad + totalEdad;
+        contador++;
+    }
+
+    mediaEdad = totalEdad / numeroIntegrantes;
+
+    imprimir("La media de edad en tu familia es de " + mediaEdad );
+</script>

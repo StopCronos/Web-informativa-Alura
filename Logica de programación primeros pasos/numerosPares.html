@@ -1,0 +1,24 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<h1>programa numeros pares</h1>
+<script>
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br><hr>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase){
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+    }
+
+for (let index = 1; index < 101; index++) {
+    
+    if (index%2 == 0) {
+        imprimir(" Es numero par " + index);
+    }
+    
+}
+</script>

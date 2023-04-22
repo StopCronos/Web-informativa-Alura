@@ -1,0 +1,47 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<script>
+
+function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br><hr>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir2(frase){
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+    }
+
+    function calcularImc(peso,altura){
+        return  peso / (altura * altura);
+        
+        
+    }
+    pesoCristian = 71;
+    alturaCristian = 6.7;
+    
+    imprimir2("El imc calculado es " + calcularImc(pesoCristian,alturaCristian));
+    
+    pesoInformado = prompt("Introduce el peso");
+
+    alturaInformado = prompt("Introduce la altura");
+
+    nombreInformado = prompt("Introduce el nombre");
+
+    imprimir2("El imc calculado de " + nombreInformado + " es " + calcularImc(pesoInformado,alturaInformado));
+
+    if (calcularImc(pesoInformado,alturaInformado) < 18.5) {
+        imprimir2("IMC abajo de lo recomendado");
+    }
+
+    if (calcularImc(pesoInformado,alturaInformado) >= 18.5 && calcularImc(pesoInformado,alturaInformado) < 25) {
+        imprimir2("IMC dentro de lo normal");
+    }
+
+    if (calcularImc(pesoInformado,alturaInformado) >= 25 && calcularImc(pesoInformado,alturaInformado) < 30) {
+        imprimir2("sobrepeso");
+    }
+</script>

@@ -1,0 +1,38 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<script>
+
+function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br><hr>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir2(frase){
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+    }
+var intentos = 3;
+var numRam = Math.round(Math.random()*10);
+
+var numeroLanzado = null;
+
+var contador = 0;
+
+while (contador < intentos) {
+
+    numeroLanzado = parseInt(prompt("Ingrese un numero entre 0 y 10"));
+
+    if (numRam !== numeroLanzado) {
+        alert("Usted erró, intento " + contador);
+        
+    }else{
+        alert("Acertaste en el intento " + contador + " el numero pensado era " + numeroLanzado);
+        break;
+    }
+    contador++;
+}
+
+</script>

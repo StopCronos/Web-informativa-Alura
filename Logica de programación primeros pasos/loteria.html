@@ -1,0 +1,42 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<script>
+
+function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br><hr>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase){
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+    }
+
+    function sorte(numero){
+        return Math.round(Math.random() * numero);
+ 
+    }
+
+var numRam = Math.round(Math.random()*10);
+
+var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0 y 10"));
+
+if (numRam !== numeroLanzado) {
+    imprimir("Usted erró el enumero era " + numRam);
+    
+}else{
+    imprimir("Acertaste");
+}
+
+var entrada = parseInt(prompt("Ingresa un numero"));
+var sorteado = sorte(entrada);
+
+if (sorteado == entrada) {
+    imprimir("Ganaste");
+}else{
+    imprimir("El numero ganador era " + sorteado);
+}
+</script>

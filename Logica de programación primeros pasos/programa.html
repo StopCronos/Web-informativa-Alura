@@ -1,0 +1,65 @@
+<meta charset="UTF-8">
+<script>
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(){
+        document.write("Esta frase no recibe parametros");
+    }
+
+    function imprimir2(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+document.write("Lo siguiente cantidad es una suma que no se concatenó porque hay ( )" + (8 + 2));
+    var anio = 2020;
+document.write("La edad de cristian es...");
+document.write("<br>");
+document.write(30);
+document.write("<br>");
+document.write("La edad de david es...");
+document.write("<br>");
+document.write(30 + "2");
+document.write("<br>");
+
+document.write("usando una variable año");
+document.write("<br>");
+document.write(anio + 5);
+document.write("<br>");
+
+anio = 2025;
+
+document.write("alterando la variable año");
+document.write("<br>");
+document.write(anio + 5);
+document.write("<br>");
+
+var promedio = (10+15+20)/3;
+
+document.write("variable promedio");
+document.write("<br>");
+document.write(promedio);
+document.write("<br>");
+
+var edadPaola = 10;
+var edadXimena = 15;
+var edadLaura = 20;
+
+var namePaola = "Paola";
+var nameXimena = "Ximena";
+var nameLaura = "Laura";
+
+var promedio = (edadPaola+edadXimena+edadLaura)/3;
+
+document.write("El promedio de " + namePaola + ", " + nameXimena + ", " + nameLaura + " es: ")
+saltarLinea();
+saltarLinea();
+document.write(promedio);
+saltarLinea();
+imprimir2("Esta funcion recibe un parametro");
+
+imprimir();
+</script>
+
